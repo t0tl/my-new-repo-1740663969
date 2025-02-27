@@ -1,13 +1,14 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
-import { TodoProvider } from './context/TodoContext';
-import HomeScreen from './screens/HomeScreen';
-import AddTaskScreen from './screens/AddTaskScreen';
-import CategoryScreen from './screens/CategoryScreen';
+import { TodoProvider } from './src/context/TodoContext';
+import HomeScreen from './src/screens/HomeScreen';
+import AddTaskScreen from './src/screens/AddTaskScreen';
+import CategoryScreen from './src/screens/CategoryScreen';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import type { RootStackParamList } from './src/types/navigation';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
